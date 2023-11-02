@@ -1,7 +1,13 @@
-const Modal = ({children}) => {
+import cx from 'classnames'
+const Modal = ({children, classNames}) => {
+
     
     return (
-        <div className="modal">{children}</div>
+        <div className={cx("modal", classNames)}>
+            <div className={cx("modal__box", classNames)}>
+                {children}
+            </div>
+        </div>
     )
 }
 
